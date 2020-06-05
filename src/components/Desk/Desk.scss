@@ -1,0 +1,20 @@
+@import '../../partials/variables';
+@import '../../partials/mixins.scss';
+@import '../../partials/fonts.scss';
+
+.desk {
+
+ display: flex;
+ justify-content: center;
+ width: 96%;
+ height: 15rem;
+ 
+&__table {
+
+  width: 40rem;
+  height: 12rem;
+  margin-top: 1.5rem;
+}
+
+}
+

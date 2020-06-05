@@ -1,0 +1,81 @@
+@import '../../partials/variables';
+@import '../../partials/mixins.scss';
+@import '../../partials/fonts.scss';
+
+
+.control {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 96%;
+}
+
+.player {
+  
+  &__results-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 35rem;
+  height: 5rem;
+  }
+  
+  &__panel {
+
+    display: flex;
+    flex-direction: column;
+    width: 7rem;
+  }
+  &__input-bet {
+    width: 6rem;
+  }
+  &__button-bet {
+    height: 2rem;
+    background-color: sandybrown;
+    border-radius: 0.8rem;
+    color: white;
+  }
+  &__wallet {
+    background-color: darkgrey;
+    border-radius: 1.5rem;
+    color: white;
+    width: 10rem;
+    height: 4rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+  }
+  &__text {
+    margin-top: 0;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+
+    width: 15rem;
+    height: 5rem;
+  }
+  &__button-hit {
+    height: 2rem;
+    background-color: lightgreen;
+    border-radius: 0.8rem;
+    color: white;
+  }
+  &__button-stand {
+    height: 2rem;
+    background-color: red;
+    border-radius: 0.8rem;
+    color: white;
+  }
+  &__button-new {
+    height: 2rem;
+    background-color: yellow;
+    border-radius: 0.8rem;
+    color: white;
+  }
+}
+
+.colour {
+  color: yellow;
+}

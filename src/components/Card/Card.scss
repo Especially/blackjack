@@ -3,9 +3,11 @@
 @import '../../partials/fonts.scss';
 
 .card {
-  width: 3rem;
-  height: 5 rem;
-  border-radius: 0.5rem;
-  background-color: white;
+  width: 9.5rem;
+  height: 13.5rem;
+  border-radius: 1rem;
+  background-color: gray;
+  background-image: url('../../assets/images/card.jpg');
+  background-size: cover;
 }
 
