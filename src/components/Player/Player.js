@@ -12,7 +12,7 @@ class Player extends React.Component {
     render() {
         return (
             <>
-                <Controls newGame={this.props.newGame}></Controls>
+                <Controls newGame={this.props.newGame} drawCards={this.props.drawCards} userStay={this.props.userStay}></Controls>
             </>
         )
     }
