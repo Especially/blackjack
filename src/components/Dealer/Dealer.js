@@ -8,7 +8,12 @@ class Dealer extends React.Component {
     state = {
 
     }
-
+    cards = this.props.cards.map( item => {
+        return (
+            <Card link={item.image}></Card>
+        )
+    })
+    
     render() {
         return (
             <>

@@ -186,9 +186,9 @@ class Main extends React.Component {
         return (
             <>
                 <div className="main__desk">
-                    <Dealer deckID={this.state.deckID}></Dealer>
+                    <Dealer deckID={this.state.deckID} cards={this.state.dealerCards} count={this.state.dealerCount}></Dealer>
                     <Desk />
-                    <Player deckID={this.state.deckID} newGame={this.newGame.bind(this)} drawCards={this.drawCards.bind(this)} userStay={this.userStay.bind(this)}></Player>
+                    <Player count={this.state.playerCount} deckID={this.state.deckID} cards={this.state.playerCards} newGame={this.newGame.bind(this)} drawCards={this.drawCards.bind(this)} userStay={this.userStay.bind(this)}></Player>
                 </div>
                 
             </>
