@@ -15,7 +15,7 @@ class Dealer extends React.Component {
                 <section className="dealer__section">
                     <div className="dealer__place">
                         <img className="dealer__ava" src={ava} alt="ava"/>
-                        <p className="dealer__name">Angle Jon <br/>(The Dealer)</p>
+                        <p className="dealer__name">Uncle Jon <br/>(Dealer)</p>
                     </div>
                     <div className="dealer__card-place">
                         <Card />

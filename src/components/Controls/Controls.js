@@ -23,8 +23,9 @@ class Controls extends React.Component {
                         </div>
 
                         <div className="player__buttons">
-                        <button className="player__button-hit">Hit</button>
-                        <button className="player__button-stand">Stand</button>
+                        <button className="player__button-hit" onClick={() => {
+                            return this.props.drawCards(null, 'user')}}>Hit</button>
+                        <button className="player__button-stand" onClick={this.props.userStay}>Stay</button>
                         </div>
                     </div>
                 </section>

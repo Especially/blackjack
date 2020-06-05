@@ -30,7 +30,7 @@ class Player extends React.Component {
                         <div className="player__points">$976</div>
                     </div>
                 </section>
-                <Controls newGame={this.props.newGame}></Controls>
+                <Controls newGame={this.props.newGame} drawCards={this.props.drawCards} userStay={this.props.userStay}></Controls>
             </>
         )
     }
