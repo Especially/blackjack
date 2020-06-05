@@ -42,7 +42,22 @@ class Main extends React.Component {
         });
         return (value === 1)
     }
-
+    gameReset() {
+        this.setState = {
+            deckID: null,
+            bet: 0,
+            notice: '',
+            dealerCards: [],
+            playerCards: [],
+            dealerCount: 0,
+            playerCount: 0,
+            playerStatus: true,
+            dealerStatus: false,
+            wallet: 500,
+            gameOver: false,
+            message: ''
+        }
+    }
     evaluateHand(hand, player) {
         let total = 0;
         const tens = ['JACK', 'QUEEN', 'KING'];
@@ -90,6 +105,7 @@ class Main extends React.Component {
                     } else
                         if (item.value === 'ACE') {
                             console.log('has Ace');
+                            aceFlag = true;
                             total += 11;
                         }
                 } else {
@@ -100,7 +116,7 @@ class Main extends React.Component {
             if (total > 21) {
                 if (aceFlag) {
                     console.log('Theres an ace -- adjusting');
-                    return total -= 10;
+                    total -= 10;
                 }
             }
             this.setState({ dealerCount: total }, () => {
@@ -113,14 +129,15 @@ class Main extends React.Component {
 
             // If dealer has less than the player
             if (this.state.dealerStatus && (total < this.state.playerCount)) {
+                console.log('REason 1');
                 this.drawCards(null, 'dealer')
-            }
-            // If dealer ties with the player but hasnt reached 21
+            } else
             if (this.state.dealerStatus && (total === this.state.playerCount) && (this.state.playerCount !== 21)) {
+                console.log('REason 2');
                 this.drawCards(null, 'dealer')
-            }
-
+            } else
             if (this.state.dealerStatus && total < 21) {
+                console.log('REason 3');
                 this.drawCards(null, 'dealer');
             }
         }
