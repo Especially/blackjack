@@ -140,8 +140,7 @@ class Main extends React.Component {
             }
         }
         if (total > 21) {
-            console.log('bust');
-            this.setState({ gameOver: true, message: `Oops, ${player} busted with ${total}` })
+            return this.setState({ gameOver: true, message: `Oops, ${player} busted with ${total}` })
         }
 
     }
