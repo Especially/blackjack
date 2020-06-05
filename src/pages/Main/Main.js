@@ -142,8 +142,7 @@ class Main extends React.Component {
             }
         }
         if (total > 21) {
-            console.log('bust');
-            this.setState({ gameOver: true, message: `Oops, ${player} busted with ${total}` })
+            return this.setState({ gameOver: true, message: `Oops, ${player} busted with ${total}` })
         }
 
     }
@@ -187,9 +186,9 @@ class Main extends React.Component {
         return (
             <>
                 <div className="main__desk">
-                    <Dealer deckID={this.state.deckID} cards={this.state.dealerCards}></Dealer>
+                    <Dealer deckID={this.state.deckID} cards={this.state.dealerCards} count={this.state.dealerCount}></Dealer>
                     <Desk />
-                    <Player deckID={this.state.deckID} cards={this.state.playerCards} newGame={this.newGame.bind(this)} drawCards={this.drawCards.bind(this)} userStay={this.userStay.bind(this)}></Player>
+                    <Player count={this.state.playerCount} deckID={this.state.deckID} cards={this.state.playerCards} newGame={this.newGame.bind(this)} drawCards={this.drawCards.bind(this)} userStay={this.userStay.bind(this)}></Player>
                 </div>
                 
             </>
