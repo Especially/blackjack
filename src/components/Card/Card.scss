@@ -1,0 +1,11 @@
+@import '../../partials/variables';
+@import '../../partials/mixins.scss';
+@import '../../partials/fonts.scss';
+
+.card {
+  width: 3rem;
+  height: 5 rem;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
