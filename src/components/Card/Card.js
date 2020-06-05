@@ -1,11 +1,12 @@
 import React from 'react';
 import './Card.scss';
+import card from '../../assets/images/card.jpg'
 
 
 const Card = () => {
     return (
         <>
-            <div className="card"></div>
+            <img className="card" src={card} alt="card"/>
         </>
     )
 }
