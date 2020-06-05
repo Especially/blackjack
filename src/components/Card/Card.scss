@@ -1,0 +1,13 @@
+@import '../../partials/variables';
+@import '../../partials/mixins.scss';
+@import '../../partials/fonts.scss';
+
+.card {
+  width: 9.5rem;
+  height: 13.5rem;
+  border-radius: 1rem;
+  background-color: gray;
+  background-image: url('../../assets/images/card.jpg');
+  background-size: cover;
+}
+

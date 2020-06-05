@@ -3,6 +3,8 @@ import axios from 'axios';
 import Player from '../../components/Player/Player';
 import Dealer from '../../components/Dealer/Dealer';
 import './Main.scss';
+import Card from '../../components/Card/Card';
+import Desk from '../../components/Desk/Desk'
 
 const API_URL = `https://deckofcardsapi.com/api/deck`;
 
@@ -183,9 +185,12 @@ class Main extends React.Component {
     render() {
         return (
             <>
-                {this.state.gameOver && <div>{this.state.message}</div>}
-                <Dealer deckID={this.state.deckID}></Dealer>
-                <Player deckID={this.state.deckID} newGame={this.newGame.bind(this)} drawCards={this.drawCards.bind(this)} userStay={this.userStay.bind(this)}></Player>
+                <div className="main__desk">
+                    <Dealer deckID={this.state.deckID}></Dealer>
+                    <Desk />
+                    <Player deckID={this.state.deckID} newGame={this.newGame.bind(this)} drawCards={this.drawCards.bind(this)} userStay={this.userStay.bind(this)}></Player>
+                </div>
+                
             </>
         )
     }

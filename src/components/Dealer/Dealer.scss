@@ -1,0 +1,55 @@
+@import '../../partials/variables';
+@import '../../partials/mixins.scss';
+@import '../../partials/fonts.scss';
+
+.dealer {
+  &__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  height: 15rem;
+  padding-left: 1rem;
+
+  padding-top: 1rem;
+}
+  &__place {
+    width: 11.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &__ava {
+    width: 11.5rem;
+    height: 10rem;
+    border-radius: 6rem;
+    color: blue;
+  }
+  &__name {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 0;
+  }
+  &__card-place {
+    display: flex;
+    flex-direction: row;
+  }
+  &__score {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 10rem;
+    height: 100%;
+  }
+  &__header {
+    margin-top: 4rem;
+
+  }
+  &__points {
+    margin-top: 1rem;
+  }
+}
+
+
